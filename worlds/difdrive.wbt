@@ -1,0 +1,30 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.0015929920121129568 -0.704516942218113 -0.7096853813515458 3.1470112254905
+  position -2.399517882023372 6.542231571358067 0.14473326362776429
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation -2.3814445971753155 -1.865174681370263e-14 0.06548630388031579
+  floorSize 5 5
+  floorTileSize 5 5
+  floorAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "BasesCircularesInv.png"
+        ""
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+}
+E-puck {
+  translation -0.4600569587065555 -2.6645352591003757e-15 0.07146889163491561
+  controller "Controller_DifDrive"
+}
