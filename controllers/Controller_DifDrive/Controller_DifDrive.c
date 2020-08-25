@@ -8,9 +8,7 @@
 static WbDeviceTag left_motor, right_motor;
 
 double getVR(double VL, double R) {
-  const double L = 0.0565;
-  // double L = 0.115;
-  
+  double L = 0.0565;
   double VR;
   
   VR = VL * (R + L/2) / (R - L/2);
@@ -35,21 +33,16 @@ int main(int argc, char **argv)
 
   double VR;  // Velocidade da roda direita (VR)
   double VL;  // Velocidade da roda esquerda (VL)
-  double R;  // Raio da circunferencia que o rob� deve fazer
-  // double d; // metade da dist�ncia do eixo do rob� em metros
+  double R;  // Raio da circunferencia que o robo deve fazer
 
   while (wb_robot_step(TIME_STEP) != -1) {
-    VL = 0.05;
-    R = 0.5;
+    VL = 0.0205;
+    R = 2.0;
     VR = getVR(VL, R);
-    
-    // printf("R: %.2f, VR: %.2f\n", R, getVR(VL,R));
-    
+       
     double wl = toAngularSpeed(VL);
     double wr = toAngularSpeed(VR);
-    
-    printf("wl: %.5f, wr: %.5f\n", wl, wr);
-        
+          
     wb_motor_set_velocity(left_motor, wl);
     wb_motor_set_velocity(right_motor, wr);
 
