@@ -37,8 +37,9 @@ int main(int argc, char **argv)
 
     /* COLOQUE SEU CODIGO AQUI */
     VL = 5.0;
+    R = 2.0;
     
-    printf("R: %.2f, VR: %.2f\n", 1.0, getVR(VL, 1.0));
+    printf("R: %.2f, VR: %.2f\n", R, getVR(VL,R));
     // printf("R: %.2f, VR: %.2f\n", 2.0, getVR(VL, 2.0));
     // printf("R: %.2f, VR: %.2f\n", 3.0, getVR(VL, 3.0));
     // printf("R: %.2f, VR: %.2f\n", 4.0, getVR(VL, 4.0));
@@ -46,7 +47,7 @@ int main(int argc, char **argv)
     // VR = MAX_SPEED;
     // VL = MAX_SPEED;
     
-    VR = getVR(VL, 1.0);
+    VR = getVR(VL, R);
     wb_motor_set_velocity(left_motor, VL);
     wb_motor_set_velocity(right_motor, VR);
 
